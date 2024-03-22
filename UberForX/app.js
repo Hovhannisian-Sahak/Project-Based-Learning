@@ -19,11 +19,13 @@ app.use(
     limit: "5mb",
   })
 );
-
+app.use(cors());
 // connect to Database
 console.log(process.env.DB_URI);
 mongoose
-  .connect("mongodb+srv://sahak:sahak@cluster0.lknrzhn.mongodb.net/cluster0?retryWrites=true&w=majority")
+  .connect(
+    "mongodb+srv://sahak:sahak@cluster0.lknrzhn.mongodb.net/cluster0?retryWrites=true&w=majority"
+  )
   .then(() => {
     console.log("connected to db");
   })
