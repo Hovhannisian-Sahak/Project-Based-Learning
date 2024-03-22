@@ -1,7 +1,7 @@
-const dataoModel = require("./data-model");
-const Cop = dataoModel.Cop;
-export const fetchNearestCops = (coordinates, maxDistance) => {
-  Cop.find({
+const dataModel = require("./data-model");
+const Cop = dataModel.Cop;
+const fetchNearestCops = (coordinates, maxDistance) => {
+  return Cop.find({
     location: {
       $near: {
         $geometry: {
@@ -17,3 +17,4 @@ export const fetchNearestCops = (coordinates, maxDistance) => {
       console.log(err);
     });
 };
+exports.fetchNearestCops = fetchNearestCops;
