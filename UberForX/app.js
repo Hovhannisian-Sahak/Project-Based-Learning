@@ -13,7 +13,7 @@ app.use(
     extended: true,
   })
 );
-
+app.use(cors());
 app.use(
   bodyParser.json({
     limit: "5mb",
