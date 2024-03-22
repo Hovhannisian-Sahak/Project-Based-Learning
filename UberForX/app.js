@@ -13,7 +13,7 @@ app.use(
     extended: true,
   })
 );
-
+app.use(cors());
 app.use(
   bodyParser.json({
     limit: "5mb",
@@ -23,7 +23,9 @@ app.use(
 // connect to Database
 console.log(process.env.DB_URI);
 mongoose
-  .connect("mongodb+srv://sahak:sahak@cluster0.lknrzhn.mongodb.net/cluster0?retryWrites=true&w=majority")
+  .connect(
+    "mongodb+srv://sahak:sahak@cluster0.lknrzhn.mongodb.net/cluster0?retryWrites=true&w=majority"
+  )
   .then(() => {
     console.log("connected to db");
   })
