@@ -4,7 +4,7 @@ const consolidate = require("consolidate");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-const routes = require("./routes"); // File that contains our endpoints
+const routes = require("./routes"); // File that contains our endpointsss
 
 const app = express();
 
@@ -27,7 +27,7 @@ mongoose
     "mongodb+srv://sahak:sahak@cluster0.lknrzhn.mongodb.net/cluster0?retryWrites=true&w=majority"
   )
   .then(() => {
-    console.log("connected to db");
+    console.log("connected to dbbb");
   })
   .catch((err) => {
     console.error(err);
